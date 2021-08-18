@@ -1,4 +1,4 @@
-/* 가운데 정렬 */
+/* 기본 설정 */
 * {
 	box-sizing: border-box;
 }
@@ -6,6 +6,23 @@
 html, body {
 	margin: 0;
 	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+button, input {
+	border-radius: 0;
+    border: 0;
+}
+
+/* 폰트 설정 */
+body, button, input, select, table, textarea {
+    font-size: 12px;
+    line-height: 16px;
+    color: #202020;
+    font-family: "Malgun Gothic", sans-serif;
 }
 
 
@@ -18,16 +35,27 @@ html, body {
 	height: 1px;
 }
 
-.center-align {
+.group-flex {
+	position: relative;
   	width: 1080px;
+	height: 100%;
   	margin: 0 auto;
 }
 
 
 
 /* header layout */
+header {
+	position: relative;
+    height: 160px;
+    background-color: #fff;
+    border-bottom: 1px solid #e4e8eb;
+}
+
 #header-top {
-	float: right;
+	position: absolute;
+    top: 12px;
+    right: 27px;
 }
 
 #header-top span {
@@ -35,24 +63,25 @@ html, body {
 	letter-spacing: -1px; /*글자 간격*/
 	font-size: 11px;
 	line-height: 22px;
+	padding: 0 4px 0 4px;
 }
 
-#header-search {
-	clear: both;
+#header-center {
+	position: relative;
+	height: 100%;
 }
 
-#header-search * {
-	vertical-align: middle;
+#header-logo {
+	position: absolute;
+    top: 50%;
+    left: -9px;
+    margin: -32px 0 0 0;
 }
 
-#header-search > a {
-	text-decoration: none;
-}
-
-#header-search > a > h1 {
+#header-logo > a {
 	display: inline-block;
-	width: 198px;
-	height: 48px;
+	width: 222px;
+	height: 52px;
 	/* logo insert */
 	background: url(../img/sp_search.png) -4px -4px no-repeat;
 	/* text display none */
@@ -60,43 +89,59 @@ html, body {
 	overflow: hidden;
 }
 
+#header-search {
+	position: absolute;
+    top: 50%;
+    left: 222px;
+    margin-top: -28px;
+}
+
 #header-search > fieldset {
-	width: 521px;
-	height: 48px;
-	border: 2px solid #03cf5d;
-	margin-left: 20px;
-	padding: 12px 0 12px 10px;
-	display: inline-block;
 	position: relative;
+    width: 582px;
+    height: 52px;
+    border: 2px solid #19ce60;
+    border-radius: 2px;
+	margin: 0;
+	padding: 0;
+
 }
 
 #header-search > fieldset > input {
-	border: none;
-	outline: none;
-	padding: 0;
-	vertical-align: top;
-	width: 405px;
-	height: 23px;
+	box-sizing: content-box;
+	width: 444px;
+    height: 21px;
+    padding: 13px 15px;
+    margin: 1px;
+    background-color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+    font-weight: 700;
+    outline: 0;
 }
 
 #header-search > fieldset > button {
-	width: 49px;
-	height: 48px;
-	border: none;
-	padding: 0;
-	background: #03cf5d;
 	position: absolute;
-	right: -2px;
-	top: -2px;
+	margin: 0;
+	padding: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 52px;
+    background-color: #19ce60;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
 }
 
 #search-button-img {
 	background-image: url(../img/sp_search.png);
-	background-position: -4px -60px;
+	background-position: -3px -60px;
 	background-repeat: no-repeat;	
-	width: 21px;
-	height: 21px;
 	display: inline-block;
+    width: 22px;
+    height: 22px;
+    vertical-align: top;
 }
 
 
