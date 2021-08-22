@@ -37,8 +37,9 @@ body, button, input, select, table, textarea {
 
 .group-flex {
 	position: relative;
-  	width: 1080px;
+    width: 1130px;
 	height: 100%;
+    padding: 0 30px;
   	margin: 0 auto;
 }
 
@@ -49,7 +50,6 @@ header {
 	position: relative;
     height: 160px;
     background-color: #fff;
-    border-bottom: 1px solid #e4e8eb;
 }
 
 #header-top {
@@ -144,17 +144,81 @@ header {
     vertical-align: top;
 }
 
+#header-search .search-keyboard {
+	position: absolute;
+    top: 0;
+    right: 84px;
+    bottom: 0;
+    width: 36px;
+}
+
+.search-keyboard span:first-child {
+	background-image: url(../img/sp_search.png);
+	background-position: -33px -60px;
+	background-repeat: no-repeat;
+
+    display: inline-block;
+	position: absolute;
+    top: 50%;
+    left: 50%;    
+	width: 20px;
+    height: 12px;
+    margin: -6px 0 0 -10px;
+}
+
+#header-search .search-history {
+	position: absolute;
+    top: 0;
+    right: 64px;
+    bottom: 0;
+    width: 22px;
+}
+
+.search-history span:first-child {
+	background-image: url(../img/sp_search.png);
+	background-position: -87px -60px;
+	background-repeat: no-repeat;	
+
+    display: inline-block;
+	position: absolute;
+    top: 50%;
+    left: 50%;    
+    width: 10px;
+    height: 6px;
+    margin: -3px 0 0 -5px;
+}
+
 
 /* nav layout */
 
-nav ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+nav {
+    border-top: 1px solid #e4e8eb;
+    border-bottom: 1px solid #e4e8eb;
+	box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
 }
 
-nav li {
+#nav-group {
+	overflow: hidden;
+    position: relative;
+    padding: 11px 270px 11px 0
+}
+
+ul.nav-list {
 	display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+.nav-list .nav-item+.nav-item {
+    margin-left: 12px;
+}
+
+.nav-item {
+	display: inline-block;
+    position: relative;
+    top: 3px;
 }
 
 nav li span:first-child {
