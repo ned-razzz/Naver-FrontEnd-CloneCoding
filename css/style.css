@@ -189,8 +189,8 @@ header {
 }
 
 
-/* nav layout */
 
+/* nav layout */
 nav {
     border-top: 1px solid #e4e8eb;
     border-bottom: 1px solid #e4e8eb;
@@ -248,4 +248,35 @@ nav li:nth-child(3) span:first-child {
 nav li:nth-child(4) span:first-child {
 	width: 40px;
 	background-position: -101px -156px;
+}
+
+
+
+/* main layout */
+main {
+	overflow: auto;
+}
+
+main.group-flex {
+    padding: 20px 30px;
+	box-sizing: content-box;
+}
+
+#main-left {
+	float: left;
+	width: 750px;
+}
+
+
+#main-right {
+	float: right;
+	width: 350px;
+}
+
+
+
+/* footer layout */
+footer {
+    background-color: #fafbfc;
+    border-top: 1px solid #e4e8eb;
 }
