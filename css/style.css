@@ -1,8 +1,4 @@
 /* 기본 설정 */
-* {
-	box-sizing: border-box;
-}
-
 html, body {
 	margin: 0;
 	padding: 0;
@@ -43,6 +39,11 @@ body, button, input, select, table, textarea {
   	margin: 0 auto;
 }
 
+.use-naver-icon {
+	background-image: url(../img/naver_icon.png);
+    background-size: 444px 439px;
+}
+
 
 
 /* header layout */
@@ -74,25 +75,23 @@ header {
 #header-logo {
 	position: absolute;
     top: 50%;
-    left: -9px;
-    margin: -32px 0 0 0;
+    left: 5px;
+    margin-top: -28px;
 }
 
-#header-logo > a {
+#header-logo .use-naver-icon {
+	background-position: 0 -158px;
+	background-repeat: no-repeat;
+	
 	display: inline-block;
-	width: 222px;
-	height: 52px;
-	/* logo insert */
-	background: url(../img/sp_search.png) -4px -4px no-repeat;
-	/* text display none */
-	text-indent: 100%;
-	overflow: hidden;
+    width: 223px;
+    height: 56px;
 }
 
 #header-search {
 	position: absolute;
     top: 50%;
-    left: 222px;
+    left: 268px;
     margin-top: -28px;
 }
 
@@ -107,10 +106,9 @@ header {
 
 }
 
-#header-search > fieldset > input {
-	box-sizing: content-box;
+#header-search fieldset input {
 	width: 444px;
-    height: 21px;
+    height: 24px;
     padding: 13px 15px;
     margin: 1px;
     background-color: #fff;
@@ -121,7 +119,7 @@ header {
     outline: 0;
 }
 
-#header-search > fieldset > button {
+#header-search fieldset button {
 	position: absolute;
 	margin: 0;
 	padding: 0;
@@ -134,17 +132,16 @@ header {
     cursor: pointer;
 }
 
-#search-button-img {
-	background-image: url(../img/sp_search.png);
-	background-position: -3px -60px;
-	background-repeat: no-repeat;	
+#header-search fieldset button .use-naver-icon {
+    background-position: -420px -208px;
+    background-repeat: no-repeat;
 	display: inline-block;
     width: 22px;
     height: 22px;
     vertical-align: top;
 }
 
-#header-search .search-keyboard {
+#search-keyboard {
 	position: absolute;
     top: 0;
     right: 84px;
@@ -152,11 +149,9 @@ header {
     width: 36px;
 }
 
-.search-keyboard span:first-child {
-	background-image: url(../img/sp_search.png);
-	background-position: -33px -60px;
+#search-keyboard .use-naver-icon {
+    background-position: -300px -279px;
 	background-repeat: no-repeat;
-
     display: inline-block;
 	position: absolute;
     top: 50%;
@@ -166,7 +161,7 @@ header {
     margin: -6px 0 0 -10px;
 }
 
-#header-search .search-history {
+#search-history {
 	position: absolute;
     top: 0;
     right: 64px;
@@ -174,23 +169,21 @@ header {
     width: 22px;
 }
 
-.search-history span:first-child {
-	background-image: url(../img/sp_search.png);
-	background-position: -87px -60px;
+#search-history .use-naver-icon {
+    background-position: -96px -296px;
 	background-repeat: no-repeat;	
-
     display: inline-block;
 	position: absolute;
     top: 50%;
     left: 50%;    
     width: 10px;
-    height: 6px;
-    margin: -3px 0 0 -5px;
+    height: 5px;
+    margin: -2px 0 0 -5px;
 }
 
 
-/* nav layout */
 
+/* nav layout */
 nav {
     border-top: 1px solid #e4e8eb;
     border-bottom: 1px solid #e4e8eb;
@@ -248,4 +241,35 @@ nav li:nth-child(3) span:first-child {
 nav li:nth-child(4) span:first-child {
 	width: 40px;
 	background-position: -101px -156px;
+}
+
+
+
+/* main layout */
+main {
+	overflow: auto;
+}
+
+main.group-flex {
+    padding: 20px 30px;
+	box-sizing: content-box;
+}
+
+#main-left {
+	float: left;
+	width: 750px;
+}
+
+
+#main-right {
+	float: right;
+	width: 350px;
+}
+
+
+
+/* footer layout */
+footer {
+    background-color: #fafbfc;
+    border-top: 1px solid #e4e8eb;
 }
